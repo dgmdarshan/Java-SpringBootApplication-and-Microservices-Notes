@@ -1,0 +1,416 @@
+Types of API request
+1.GET Request
+2.POST Request
+3.PUT Request
+4.DELETE Request
+
+-->Get Request:
+-Retrieve or GET resources from server
+-Used only to read data
+
+-->Post Request
+-Create resource from server
+
+-->Put Request
+-Upadte existing resources on Server
+-200ok or 404 or any bad request
+
+-->Delete Request
+-Used to delete resources from server
+--100ok if successfull or 404,or any bad request
+
+What is a Web Framework
+->Why do we need web framework
+-Websites have lots in common
+-Security,Databases,URLs,Authentication...more 
+-Should you do this everytime from scratch?
+
+example
+Think of building a house
+-you would need blueprint and tools
+-thats how web development works
+-Earlier Developer had to build from scartch
+
+What if..
+-you could have prefabricated components?
+-could you assemble faster?
+-could you reduce errors?
+-Would that make you fast
+
+This is what a web framework does!
+
+What is a web framework
+Web framework is nothing but collection of tools and modules that is neede to do standard taks across every web application.
+
+Popular Web frameworks
+1.Spring boot-java based
+2.Django-python based
+3.Flask-python based
+4.Express-js based
+5.Ruby on Rails-Ruby based
+
+Introduction Spring Framework
+-spring takes away the hassle
+
+Feature of Spring Framework
+-Inversion of Control(IoC)-it will tell that don't woory u just create class I will create multiple objects in bean and the code i loosely coupled
+-Data Access
+-MVC Framework:it have front controller which controll all sub controller where client request data the request checkin front controller and front controoller check the sub controller and passes the response to the client.
+-Transcation Management
+-Security:To secure the application and vernurabilities
+-Testing Support:unit testing ,integration testing in b uilt
+-Internationaliztion (i18n) and Localization (l10n)
+
+History of Spring Framework
+-developed by Rod Johnson in 2002
+-First version released in march 2004
+-Since then ,major developments and version released
+
+What is Spring Boot?
+-open source , java based framework used to create stand alone,production grade spring based application
+
+Spring                                Spring boot
+->Lots of steps involved in setting | ->Offers a set of  pre-configurees components or defaults,
+up ,configuration ,writting boilerp |	and eleminating the need for a lot of boilerplate code
+-late code,deployment of the app    |	that was involved in setting a spring application
+ 
+Spring Boot=Spring framework + prebuilt Configuration + Embedded Servers
+
+Components of Spring Boots
+1.Spring boot Starters-dependency
+2.Auto Configuration
+3.Spring Boot Actuator-monitoring the application,metrix gathering 
+4.Embedded Server-tomcat,IBM,etc
+5.Spring Boot Dev Tools:Automatically save , faster development etc
+
+
+Advantages of Spring Boot
+->Stand alone and quick start
+->Starter code
+->Less Configuration
+-.Reduced cost and application development time
+
+Why do developers love spring boot?
+-java based
+-Fast and easy
+-Comes with embedded servers
+-Various plugins
+-Avoids boilerplate code and configuration
+
+Spring Boot Architecture 
+-It has layered architecture
+-->Presentation layer:presents the data and application features too the user.This is the layer where in all the controller classes exist.
+-->Service layer:is where bussiness logic resides in the application.Tasks such as evaluations,decision making,processing of data is done at this layer.
+-->Data Access layer:is the layer where all the repository classes reside (read,retrive,save data)
+		 |---------------------------------------------------------------|
+		 |			our application				 |
+		 |								 |
+		 |								 |
+	Request->|								 |
+Browser------------>Controller------->Service------->Repository-------->Database |
+	<------	 |	<------	     	<------               <-------		 |
+		 |								 |
+		 |---------------------------------------------------------------|
+
+
+
+Know lets go to the JPA
+
+What is JPA
+->Java Persistence API
+->allows you to convert objects into relational tables
+
+Advantages of using JPA
+->Easy and Simple
+->Makes writting query easier(in the form of entities)
+->Allows tp save ,insert and update objects
+->Easy integration with spring boot
+
+
+Lets Understand Data Layer
+This layer will help to perform CURD operation 
+To do these set operation we need certain methods like
+->findAll();
+->get__(int id);
+->update__(__ emp);
+->delete__(__ emp);
+Reponsible to find all data in database
+
+Syntax:
+	JpaRepository<entity-name>,<primary-key-type>
+
+I have developed a project using this spring architecture with the use of these 3 layers
+GitHub Link:
+Project Title:Job Searching Application
+
+
+In our project i have two category one is JOB and another one is COMPANY
+Know its time to build Job and its functionalities
+JOB
+->GET /jobs
+->PUT /jobs/{id}
+->POST /jobs
+->DELETE /jobs/{id}
+->GET /jobs/{id}
+
+Know its time to build Company and its functionalities
+
+COMPANIES
+->GET /companies
+->PUT /companies/{id}
+->POST /companies
+->DELETE /companies/{id}
+->GET /companie/{id}
+
+
+
+Introduction to spring boot actuator
+->Is a integral part of spring boot application 
+->It provides built in production ready features to monitor and manage your application
+->Basically it is a tool or an interface that u can manage your application
+->It helps to check like application health,and many more things
+
+Why it is important?
+-> Gives you the ability to monitor and manage your application
+
+Features
+->Built in endpoints
+->Ability to view real time metrics
+->Customizable
+
+Understanding Actuator Endpoints
+-> /health: shows application health information ,useful for checking the status of the application such as database connectivity,disk space,and custom health checks.
+
+-> /info: Display arbitary application information,commonly used to display application version,git coomit information etc.
+
+-> /metrics: Shows 'metrics' information that allows you to understand the performance and behaviour of your running application.
+
+-> /loggers: Allows you to query and modify the logging level of your application's loggers.
+
+-> /beans: Provides a complete list of all the spring beans in your application.
+
+-> /shutdown: Allows your application to be gracefully shut down
+
+
+Lets Go with DEVOPS
+Introduction to Docker
+->Docker is an open source platform that allows you to automate the deployement , scalling and management of applications using containerzation.
+
+Docker Container contains:
+->CODE<>
+->RUNTIME
+->LIBRARIES
+->SYSTEM TOOLS
+
+Virtual Machines:
+->Virtual machines act like separate computers inside your computer.
+->Each Virtual Machine behaves like a separate computer.
+->Virtual Machine are created and managed by virtualization software.
+
+Lets see how Docker differes from Virtual machine
+
+Virtual Machine Architecture
+->Hypervisor: Which helps to interact with Virtual Machine
+->Host OS
+->Machine
+Example : lets create a Virtual Machine
+->App A		| ->App B  	    	| ->App B
+->Libs/Bins	| ->Libs/Bins		| ->Libs/Bins
+->Guest OS{Win}	| ->Guest OS{Linux}	| ->Guest OS
+
+*}Multiple Versions of Virtual Machines running on a same system
+*}We can also have the same instance
+*}There are 3 VM are running and they are Heavy weight
+
+Docker Architecture
+->Docker Engine:Responsible for container
+->Host OS
+->Machine
+Example :lets create a Docker 
+->App A		| ->App B	| ->APp B
+->Libs/Bins	| ->Libs/Bins	| ->Libs/Bins
+
+*}In Docker there is no guest OS running,it has only nesscesery thing that are running
+*}There are 3 containers are running and they are light weight
+*}We can also have the same instance
+
+Parameters     Virtual machine                              Docker Containers
+->Size	       Relatively large and resource-intensive	 | Lightweight and resource-efficient
+
+->StartUp      Longer boot time as full OS needs to start| Almost instant startuo as no OS 
+ Time							     boot required
+
+->Resource     Utilizes more system resources(CPU,memory)| Utilizes fewer system resources
+  Utilization 
+
+->Isolation    Strong isolation between VMs 		|  Isolated but shares host OS kernel
+
+->Protability  Portable but requires OS compatibity	|  Highly portable independent of hostOS
+
+->Scalabilty   Scaling requires provisioning of new VMs | Easy to scale by creating more   
+							  containers
+
+->Ecosystem    VM-specific tools and management         | Docker ecosystem with extensive  
+		framework				   tooling
+
+->Sevelopment  Slower setup and provisiong process      | Faster setup and dependency management
+  Workflow
+
+->Deployment   More overhead due to larger VM size      | Efficient deployment with smaller 
+  Efficency						  container
+
+DOCKER ARCHITECTURE
+
+ ________________________
+ |    Docker Engine	|/>Docker Containers
+ |   --------------    /|
+ |  		      /	|
+ |	Docker CLI   /	|
+ | 	  |	    /	|
+ |	Docker API /	|
+ |	  |	  /	|
+ |	Docker	 /	|		  Docker Registery
+ |	Daemon	/	|		   ^
+ |________|_____<_\_____|		  /
+	  |        \			 /
+ 	  |          \		        /	
+     Host OS	       \>Docker Images</
+
+
+
+Concepts of Docker
+->Images:Docker images are like templates that define the container and its dependencies.
+->Containers:Containers are reuntime environments creatred from Docker images.
+->Docker Engine:The Docker Engine is the runtime that runs and manages containers.
+->Dockerfile:A Dockerfile is a file that contains instruction to build a Docker image.
+->Docker Hub:Docker hub is a cloud-based registry that hosts a vast collection of Docker images.
+
+
+DOCKER REGISTRY
+->Docker registry is a storage and distribution system for named Docker images.
+
+Importance of Docker Registry
+->Centralized Resource
+->Easy Versioning
+->Share your Docker images
+
+
+Different Docker Registry
+->Docker HUB:Most populary used
+->Amazon Elastic Container Registry
+->Google Cloud Artifact Registry
+->Azure Container Registry
+->Red Hat Query.io
+
+
+Containerizing Our Spring Boot Application
+
+We want to have a Dockerfile
+which contains
+
+FROM openjdk:11
+VOLUME/temp
+ADD target/my-app.jar my-app.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/my-app.jar"]
+
+How does the process work?
+->Spring boot internally leverages cloud native buildpacks to  create dockerimages with out the need of a  dockerfile.
+->Spring boot maven plugin congigure triggers cloud native buildpacks
+->Layering:Buildpacks use layering to create separte create path  in the Dockerimages and they call it layers
+example:
+layer 1 contains JVM
+layer 2 contains Application dependency
+layer 3 contains Application itself
+So all the layers are cache
+
+->Paketo Buildpacks :To ensure excellent supports for Spring boot application ,these are implementation of cloud native buildpacks specification and they provide JVM and other tools requried to compile spring boot application into Dockerimage
+->Result:Dockerimage can run in any docker compactable runtime.
+
+Advantages
+->No Dockerfile Needed
+->Sensible Default
+->Consistent Environment
+->Security
+->Layering and Efficiency
+->Ease of use
+
+To run our Spring boot application in docker we have some certain command where our spring boot application conatins maven plugin so we will get easy to add the docker in our application
+Command:./mvnw spring-boot:build-image -Dspring-boot.build-image.imagName=<IMAGE-NAME>
+its a maven wrapper script
+
+Docker Commands
+->docker pull <image>
+->docker push <username/image>
+->docker run -it -d -p <host-port>:<container-port> --name <name> <image>
+it:interactive
+d:detach mode
+p:port mapping
+->docker stop <container-id/container-name>
+->docker start <container-id/container-name>
+->docker rm <container-id/container-name>
+rm:remove
+->docker rmi <image-id/image-name>
+rmi:remove image
+->docker ps
+ps:use to get running docker containers
+->docker ps -a
+-a:which is used to show all the container which are stopped running
+->docker images
+list all the images on the host
+->docker exec -it<container-name/container-id> bash
+->docker build -t <username/image>
+->docker logs <container-name/container-id>
+->docker inspect <container-name/container-id>
+------------------------------------------------------------------------------------------------
+->Before Microsevices the application used to built Monolithical application
+->Monolithic has everything unified
+->Monolithic arcitecture is a design where all the componets of an application are interconnected and interdependent
+
+The JOB search application is build monolithic form
+
+
+			Company
+
+			
+Browser------->    		                         ---------->Databases
+
+		 	Job
+
+		   |   | sending request to server  |   |
+		
+
+		           Server
+
+This is about  the application 
+ world before microservices
+
+
+Problems with Monolithic Architecture
+->Difficult to Implement changes
+->Lack of scalability
+->Long term commitment to a Single Technology Stack
+->Application Complexity and Its Effect on Development and Deployment
+->Slowing down of IDEs
+->Increased Application Start Time
+->Large Project Size
+->Deploying for samll changes
+->team Collaboration and Autonomy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+

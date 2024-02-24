@@ -1,0 +1,389 @@
+JAVA OOPS and Technology 
+Casting: converting primitive type to non-primitive type.
+primitive types: are pure form of data so by using this we can store actual values, ex:numbers,fractional values and boolean values.
+Non-primitive types:are class type we can deal with class and objects.
+
+
+wrapper class: java is not 100% objject oriented because we are using primitive data types in our programs ex:int, float , double etc
+to slove thios problem java introduce wrapper classes.
+
+JVM is completely object oriented because it will process all the data in the form of non-primitive types (classes).
+By after introdicing wrapper classes JVM can easily process the code 100% object oriented.
+
+Java provides for every data type for every classes.
+
+8bit=1byte.
+
+primitive casting types:1.narrowing (Expensive compare to widering)--> converting big data into small data,2.widering-->converting small data to big data.
+
+
+Interview questions..............
+what is time management?
+what is an object--> It is a every real world entity.-->object is also an object.
+Generalization,aggregation
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+"IS A RELATIONSHIP"{Important in} 
+"HAS A RELATIONSHIP"{Interview}+
+
+			"IS A"  &&&&   "HAS A"( ITS BELONGS TO INHERITANCE CONCEPTS)
+
+"IS A" Relationship-->use to matching super class to the base class(A super class must be have same type)EX:DOctors---->ENT ,
+							Car-->benz,suzukietc
+							Bus--->KSRTC,TSRTC etc
+
+"HAS A" Relationship-->is a irrelationship object can create any class and its should not be inheritable.
+
+"OBJECT CLASS"-->super most class for all java class is object class
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+							""""""""""POLYMORPHSIM CONCEPT"""""""""""
+
+
+
+"SPECIALIZATION"--> A method parameter is allow only one type of object is known as specialization.(Parameter is respective super  class type).
+"GENERALIZTION"---> A method parameter is allow 2 or more type of an object is known as generalization.(Parameter is Object class parameter).
+
+
+
+
+
+
+
+Object class is used to call any tyoe of data.
+
+-->parameter contains arguments and argument contains data
+-->parameter is fixed and argument data can change
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+23/08/2023
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Casting---->1.primitive ,         				----2.Non primitive Casting
+	    *Narrowing and Widering,      				 ----*Upcasting and Down Casting
+	   -->Big to Small VS Small to big		||		
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Non-primitive Casting
+types
+*UpCasting:Having base class object and super class reference is known as upcasting.
+Benifits of upcasting
+-->we can load particular class properties into JVM memory.
+
+
+*DownCasting:Super class refernece to accessing base class properties from super class references is known as downcasting.
+--> Its a mandatory if we want to make downcast before doing to down class.
+ 
+this end up with polymorphism
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+					Third piller of oops
+					-------------------------"ABSTRACTION"-------------------------------
+
+Abstraction:Hiding the implementation and  providing the functoionalities to the user is known as abstraction.
+-->In a software development we should develop the software in a lose couple manner means the user should not affect any modification of the software and should not see any important logic of the code because it may get
+
+ chances to correpting or any illegal activites on software product.
+Example1:ATM because we can insert any type of bank card to access money ||and || UPI(Unified payment Interface) is act as a abstract class for all online payment application.
+
+
+
+	  extends
+ interface ->interface
+
+	  imiplements
+ interface -->class
+
+	extends
+   class ->class
+
+class  to    interface(Not possible)
+
+
+
+--->By using class abstraction we can do 0 to 100% security for that reason java introduce "interface" interface is also java definition type , in java there are four definition typr
+1.class
+2.interface
+3.enum
+4.annotation
+-->interface syntax is followed by ----interface interfacename{}----
+interface is used to declare only abstract methods in java.
+-->we can perform inheritance also in interface, and speciality of inheritance is to support multiple inheritance
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							"CONSTRUTOR"
+
+Constructor:Is a special member of a the class which is use to initialize object states at runtime.
+
+CONSTRUCTOR SYNTAX:
+
+		class classname{
+			classname(){}
+				}
+
+Types of constructor
+In java only two constructor {implicit(D) and explicit(P)}
+1.Default constructor:whenev+er user is not providing constructor to the class JVM automatically default constructor to the class.
+2.Parameterized constructor:
+
+
+
+
+static blocks and non-static blocks:static blocks are the blocks which is used to initialize or reinitialize or separate the code.
+those blocks are not controlled by programmer those blocks are controlled by JVM.
+
+
+
+
+
+"COONSTRUCTOR OVERLOADING":-->Ina class having two or more constructor with different parameters is known as constructor overloading.
+
+
+write a program to demonstrate constructor overloading with  student class?
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+				"CONSTRUCTOR CHAIN LINK"
+There are two types of calling 
+this(): is a callable statement used to call current class constructor.// calling current class constructor.// with the help of this() callable statement.
+-->By using this() callable statement only class current class constructor by matching constructor parameter datatype.
+
+
+Calling Super class constructor: is done by super() callable statement and from the base(Down) class constructor we can call super class constructor by matching the super class constructor.
+super(): is a callable statement used to call super class constructor.// calling super class constructor.
+
+Constructor chain link: is phenomenon which one constructor can call constructor, with the help of callable statement.
+
+Conditions for constructor to call:
+--> In a constructor callable statement must be a first linee of the constructor.
+-->In a same constructor we cannot write two callable statement in a same constructor.
+
+When ever we have a inheritance when we create a base class object automatically JVM create one default constructor and also super class default constructor when we not provide.
+
+*}Constructor Advantages:
+--> constructor can be create at runtime it saves lot of memory.
+-->constructor is a specila member because programmer cannot call the constructor JVM will call the constructor automatically.
+-->constructor having a class name without written type.// constructor will return value internally //
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------								
+									"ENCAPSULATION"
+Encapsulation:means binding of data into single unit is known as Encapsulation.
+--> java by default support Encapsulation, because in java every thing you must write inside the class // variables,methods,constructor,static blocks and non-static blocks
+-->if we write any member outside the class the java compiler throws error.
++
+
+|----------------|
+|.....	|	 |
+|.....	|	 |<--Capsule
+|----------------|
+  ^
+  |
+Drug	
+
+
+
+
+-->Protecting a data in a class we call it is Encapsulation.In advance level projects we need to secure internal part with the help of Encapsulation.
+-->To achive Encapsulation in advance level programming we go for bean class.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+									      "COLLECTION FRAMEWORK"
+Collection:Is a frame work which is used to develop projects.
+definition:Collection is group of homogenous or heterogenous object,represented as single entity that is object.
+-->Collection can hold huge amount of objects.
+-->The fundamental operation on collection is
+*Adding the objects to the collection.
+*Remove
+*Search
+*Sort
+*Display
+*Traverse
+
+Collection contains lots of pre-defined methods and pre-defined classes.
+-->Collection also implemented pre-defined  interfaces and data structure.
+-->Collection is an interface.
+-->Collection is a predefined interface in a java.util package.
+									
+DIAGRAM
+
+
+-->The above hirarchey is of arrangement of based on data structure.
+-->In the above diagram there are two classes made as collections is
+
+
+				"ARRAY LIST"
+Arraylist: is a implemented class of list interface. 
+-->arraylist is used to overcome problems on arrays.
+there are two problems
+*Heterogenous object storage.
+*Array size we can change dynamically.
+-->ArrayList is a pre-definied which is located in java.util.ArrayList pacakage,and ArrayList store the object in a indexed based.
+Growing formula for arraylist is:((current capacity*3)/2) +1;
+
+*}Fundamentals methods used for the collections
+1.add()
+2.remove()
+3.size()
+4.clear()
+5.replace()
+6.get()
+7.contains()
+
+
+*}Bulk Operation methods
+1.addAll()
+2.removeAll()
+3.containsAll()
+
+
+Assissgnement on collection 
+draw the collection hirachky
+write example for arraylist  code   explain about collection
+
+
+Importent Key
+-->TreeSet stores only homogenous elements in memory it will not accpect heterogenoys elements in a same object in a memory.
+
+			"TREESET"
+Is a   predefined class it is implemented class of Set interface indirectly.
+-->TreeSet nature is to store sorted nature values.When ever we give homogenous data the TreeSet will store sorted nature,when ever user will give heterogenous data the TreeSet will throw classtype exception.
+-->TreeSet also arrange String values based on case sensitive.
+
+							"MAP"
+Map is also one type of collection in java which is used to store key and value pair objects. 
+
+
+					"3-tier architecture of programming"
+1.Front-End-->HTML5,CSS[Bootstrap],JS
+2.Backend
+A.Database-->MySQL,MongoDB. 
+B.Bussiness Logic Building Programing.-->JAVA,C,PYTHOON,C#,SWIFT(iOS).													
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+								"DATA STRUCTURE"
+
+Data Structure:Arrangement of data systemtically in computer memory which can be  retrival manner this process is called data structure.
+
+Fundamental operation for Data Structure
+-->Inserting a data for stack push
+-->Traversing a data
+-->Sorting a data
+-->Searching a data for stack peek
+-->Display a data
+-->Deleting a data for stack push
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------Exception Handling:Is a Unwanted event happening at runtime of the program or compile time of the program we need to handle the exception with the help of try catch block where try and catch are keyword with blocks.
+
+-->JVM internally throw exception object and try to find the handler.
+______________
+______________
+______________
+int a=10/0;
+______________
+______________
+______________
+
+}
+catch(____________){
+}
+catch(_________){
+}
+
+
+
+
+ question?-->Can I make generic to specific-->NO (Code unreachable)-->waste of time
+
+-->The above code rising the exception of type arthmetic and throwing the object to the jvm.JVM will find handler by searching catch blocks,if catch blocks contains respective matching class the respective catch block excute   else again the program will terminate abnormally by seeing above case developer found some case
+1.Specific to generic exceution.
+
+
+Exception propagation 
+
+
+Custom Exception:
+-Thread
+-Multi Threading 
+
+
+Hirarchy of the Exception
+
+CUSTOM EXCEPTION:
+-->programer or developer can print his own exception with the help of inheritance class or throwable exception
+
+-->custom exception always demanded by programmers and handlers also designed by programmers.
+-->Custom Exception:Is most usefull when project development and the exc exptional class must be inherited by Exception class or throwable class.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------							"REST API-->Representational State Transfer Application program interface"
+
+Which is use to making the request to the server and taking the response to the client.
+This request happen in the protocol of https to the server.We have only protocol to save web pages and through this web page we can browse our information for that we can go client server architecture where the clients are browsers or any computers.Server is a super computer which have been a software which will take the request from the client in the form of JSON,xml,html.
+
+FOR DEVELOPERS
+"MVC ARCHITECTURE" 
+M-->MODEL
+V-->VIEW 
+C-->CONTROLLER
+MVC archtecure is use to develop 3-tier architecture in server side,when the client request to the server the request goes to first model part the model having request dispacthwer(Servlet dispatcher) the model will dispatch the request and handover to controller ,the controller will collect information and prepare dynamic page and handover to view part ,the view is user interface which will display response npage to the client side.
+
+CRUD Operation-->C-Create,R-Read,U-Update,D-Delete this operations which is used for development.
+The minimum operation which involed in web apps and backend and fortend which contains CURD operations
+-->Charactersticks of algorithm
+
+
+
+
+*Input
+*Output
+*Definate values
+*Finateness
+*Correctness
+*Acceptness
+
+Serialization in JAVA
+Is a process of making an object non-persistence stage to persistance stage
+persistance-->Permanent,Non-Persistance-->Tempararoy
+
+-->Serialization is the making temp object into permanent object
+-->Serialization produce a file which is in permanent storage of object in the form of bytes,for that reason we should go for Stram API's[BUFFER,OBJECT,FILE]these are all java stream 
+API's.
+
+{SERIALIZATION AND DESERIALIZATION}
+
+NOTE:We can overload the main method in java 
+
+-->Download node js from offical website
+-->Confi VS code for the react environment	
+-->Install npm and npx package in VS
+
+
+
+
+
+
+Thread:Thread is a pre-defined class which is use to perform multi threading ,Thread class located in java.lang package
+-->If we want to perform multi task in java  always go for
+In advance java the multi threading is known as concurrent threading or mult functionall application.
+--.Some times thread may be a frontendn side or sometimes it may be a backend side
+ec playing a music downloading the file 
+-->back :Updating whats app chat at mid night time,arranging a contacts in asscending order,arranging the galary pictures
+--.Most commonly threads are backend side
+
+
+Class hirarchy for threads
+ 
+Runnable[run]-->Thread-->[clientclasses,....]
+
+Runnable is a super most interface of a class
+--> runnable cannot control the thread the job is only run the thread for that problem analyzed by java community they specifies thread class
+--> when thread class is define automatically thread life cycle is also define.
+
+-->commonly we have three thread properties namesd as thread id,thread name,thread priority.
+thread class by default bean class because we can get some properties and set some properties.
+-->id we can only get id we cannot set id rest of properties we can change and some properties we have limited like thread priority the compiler will throw exception illegal argument exception.
+
+
+
+
+
+
